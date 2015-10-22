@@ -4,16 +4,21 @@
     <meta charset="utf-8">
     <title>256 classes > 1 id</title>
     <style media="screen">
-      #eye-dee { color: aqua }
-      .class1 { color: tomato }
+      /*#eye-dee { color: aqua }*/
+      .c0 { color: tomato }
     </style>
   </head>
   <body>
-    <p class="class1" id="eye-dee">
+    <p id="eye-dee">
       If this is red, then 256 classes have beat an id.
     </p>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript">
+
+    </script>
     <script type="text/javascript">
-      
+      for (var i=0; i<256; i++) {
+        $("p").addClass("c" + i);
+      }
     </script>
   </body>
 </html>
