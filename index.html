@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>256 classes > 1 id</title>
-    <style media="screen">
-      /*#eye-dee { color: aqua }*/
-      .c0 { color: tomato }
-    </style>
+    <style media="screen"></style>
   </head>
   <body>
     <p id="eye-dee">
@@ -19,6 +16,11 @@
       for (var i=0; i<256; i++) {
         $("p").addClass("c" + i);
       }
+
+      var tons_of_styles = "#eye-dee { color: aqua } .c0 { color: tomato }";
+
+      $("style").html(tons_of_styles);
+
     </script>
   </body>
 </html>
