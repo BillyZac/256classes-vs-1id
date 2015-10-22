@@ -13,14 +13,14 @@
 
     </script>
     <script type="text/javascript">
+      var tons_of_styles = "#eye-dee { color: aqua } \n" ;
       for (var i=0; i<256; i++) {
+        tons_of_styles += ".c" + i + ", ";
         $("p").addClass("c" + i);
       }
-
-      var tons_of_styles = "#eye-dee { color: aqua } .c0 { color: tomato }";
-
+      tons_of_styles += "one_last_class \n"; /* The last class does not get a comma */
+      tons_of_styles += " { color: tomato }"; /* If classes win, the text is tomato */
       $("style").html(tons_of_styles);
-
     </script>
   </body>
 </html>
